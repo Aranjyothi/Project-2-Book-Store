@@ -8,3 +8,7 @@ const nonfiction=[{
     author: Gandhi,
     type: non-fiction
 }]
+module.exports ={
+    fiction,
+    nonfiction
+}

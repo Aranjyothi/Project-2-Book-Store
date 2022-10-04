@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 
 //bring in our routes
 // const captainsLogRoutes = require('./routes/captainsLogRoutes')
+const fictionBooksRoutes = require('./routes/fictionBooksRoutes')
 
 require('dotenv').config()
 

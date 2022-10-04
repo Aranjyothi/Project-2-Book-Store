@@ -4,7 +4,7 @@ class DefaultLayout extends React.Component{
         return(
             <html>
                 <head>
-                    <title> {this.props.title}</title>
+                    <title>{this.props.title}</title>
                     <link rel="stylesheet" href="/css/style.css" />
                 </head>
                 <body>

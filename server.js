@@ -7,8 +7,7 @@ const mongoConfig = require('./config')
 const bodyParser = require('body-parser')
 
 //bring in our routes
-// const captainsLogRoutes = require('./routes/captainsLogRoutes')
-const fictionBooksRoutes = require('./routes/fictionBooksRoutes')
+const bookStoreRoutes = require('./routes/bookStoreRoutes')
 
 require('dotenv').config()
 
@@ -23,7 +22,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 app.use(express.static("public"))
 app.use(methodOverride("_method"))
-// app.use('/logs', captainsLogRoutes)
+app.use('/books', bookStoreRoutes)
 //define port
 const port = process.env.PORT
 // Listen to port

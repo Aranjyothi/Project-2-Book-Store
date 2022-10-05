@@ -12,16 +12,23 @@ class Show extends React.Component {
           
                 <h1> Show Book Page</h1>
                 <p>
-                    The  {book.name} Author is {book.author}
+                        <a id ="link" href={book.link}><img src={book.link} alt="book link" /></a>
                    </p>
-                   <p>
-
-                   </p>
+                <p>
+                    Book Name:  {book.name}
+                </p>
+                <p>
+                    Author: {book.author}
+                </p>
+                <p>
+                    Price: {book.price}
+                </p>
+                   
                    <p>
                    {book.bookIsAvailiable ? "Book  is currently not availiable":"Book is availiable"}
                    </p>
                    <button>
-                    <a href = {`/books/${book._id}/edit`}>Edit</a>
+                    <a id="edit" href = {`/books/${book._id}/edit`}>Edit</a>
                    </button>
                    <form action={`/books/${book._id}?_method=DELETE`}method="POST"> 
                    <input type="submit" value="Delete" />

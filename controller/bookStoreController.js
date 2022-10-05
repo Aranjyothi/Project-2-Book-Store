@@ -14,7 +14,7 @@ const findAllBooks = (req, res) =>{
 
 //new
 const showNewBook = (req,res) =>{
-    res.render('books/New')
+       res.render('books/New')
 }
 
 //DELETE 
@@ -36,16 +36,16 @@ const updateBook = (req,res) =>{
     } else{
         req.body.bookIsAvailable = false
     }
-    console.log("req.body")
-    console.log(req.body)
+    // console.log("req.body")
+    // console.log(req.body)
 
     Book.findByIdAndUpdate(req.params.id,req.body,{new:true},(err,updatedBook) =>{
         // console.log(req.body)
         if(err) {
             res.status(400).json(err)
         } else{
-            console.log('ubdatedBook')
-            console.log(updatedBook)
+            // console.log('ubdatedBook')
+            // console.log(updatedBook)
             res.status(200).redirect(`/books/${req.params.id}`)
         }
     })
@@ -59,11 +59,13 @@ const createBook = (req, res)=>{
     } else{
         req.body.bookIsAvailiable = false
     }
+    // console.log(req.body)
 
 Book.create(req.body, (err, bookCreated)=>{
 if(err){
     res.status(400).json(err)
 } else{
+    // console.log(bookCreated)
     res.status(200).redirect('/books')
 }
 })
@@ -100,11 +102,11 @@ const booksListStarterData = (req, res) => {
     // console.log("hello")
 
     // Delete all remaining documents (if there are any)
-    Book.deleteMany({}, (err, deletedLogs) => {
+    Book.deleteMany({}, (err, deletedBook) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            
+            console.log(booksList)
             Book.create(booksList, (err, createdBook) => {
                 if (err) {
                     res.status(400).json(err)

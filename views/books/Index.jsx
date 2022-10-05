@@ -12,7 +12,7 @@ class Index extends React.Component{
                     {books.map((book)=>{
                         return (
                             <li key ={book._id}>
-                                 The <a href={`/books/${book._id}`}>{book.name}</a> Author is {book.author}.
+                                 The <a href={`/books/${book._id}`}>{book.name}</a> Author is {book.author} .
                             </li>
                         )
                     })}

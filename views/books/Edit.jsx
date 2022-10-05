@@ -20,7 +20,10 @@ class Edit extends React.Component {
                         <input type="text" id="author" name="author" defaultValue={book.author} /><br /><br />
 
                         <label htmlFor="link">Link:</label>
-                        <input type="text" id="link" name="link" defaultValue={book.link} /><br /><br />
+                        <input type="textarea" id="link" name="link" defaultValue={book.link} /><br /><br />
+                        
+                        <label htmlFor="summary">Summary:</label>
+                        <input type="textarea" id="summary" name="summary" defaultValue={book.summary} /><br /><br />
 
                         <label htmlFor="type">Type:</label>
                         <select name="type" id="type">

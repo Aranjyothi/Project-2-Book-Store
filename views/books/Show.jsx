@@ -12,7 +12,9 @@ class Show extends React.Component {
           
                 <h1> Show Book Page</h1>
                 <p>
-                        <a id ="link" href={book.link}><img src={book.link} alt="book link" /></a>
+                        {/* <a id ="link" href={book.link}> */}
+                            <img id= "image" src={book.link} alt="" height='20' width='20'/>
+                            {/* </a> */}
                    </p>
                 <p>
                     Book Name:  {book.name}
@@ -25,11 +27,13 @@ class Show extends React.Component {
                 </p>
                    
                    <p>
-                   {book.bookIsAvailiable ? "Book  is currently not availiable":"Book is availiable"}
+                   {book.bookIsAvailable ? "Book is available":"Book  is currently not available"}
                    </p>
+                   <div className='edit'>
                    <button>
-                    <a id="edit" href = {`/books/${book._id}/edit`}>Edit</a>
+                    <a href = {`/books/${book._id}/edit`}>Edit</a>
                    </button>
+                   </div>
                    <form action={`/books/${book._id}?_method=DELETE`}method="POST"> 
                    <input type="submit" value="Delete" />
                    </form>

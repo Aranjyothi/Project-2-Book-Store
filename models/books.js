@@ -6,7 +6,7 @@ const booksSchema = new Schema({
     author:{type: String, required:true},
     type:{type:String,required:true},
     link:{type:String,required:true},
-    price:{type:Number, required:true},
+    price:{type:String, required:true},
     bookIsAvailable:Boolean
 })
 const Book = mongoose.model('Book', booksSchema)

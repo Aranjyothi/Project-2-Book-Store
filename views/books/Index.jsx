@@ -3,16 +3,16 @@ const DefaultLayout  = require('../layouts/DefaultLayout')
 class Index extends React.Component{
     render(){
         const{books} = this.props
-        console.log(books)
+        // console.log(books)
         return(
-            <DefaultLayout title="All Books" bookStore = "books">
+            <DefaultLayout title="All Books">
             <div>
                 <h1> Book Page</h1>
                 <ul id="books-index">
                     {books.map((book)=>{
                         return (
                             <li key ={book._id}>
-                                 The <a href={`/books/${book._id}`}>{book.name}</a> Author is {book.author} .
+                                 The book <a href={`/books/${book._id}`}>{book.name}</a> Author is {book.author} .
                             </li>
                         )
                     })}

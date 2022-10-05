@@ -106,7 +106,7 @@ const booksListStarterData = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            console.log(booksList)
+            // console.log(booksList)
             Book.create(booksList, (err, createdBook) => {
                 if (err) {
                     res.status(400).json(err)

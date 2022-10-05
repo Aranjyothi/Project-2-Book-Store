@@ -27,6 +27,15 @@ img {
     margin-right:16px;
 
 }
+#btn{
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: green;
+}
 
 .space {
     width: 4px;

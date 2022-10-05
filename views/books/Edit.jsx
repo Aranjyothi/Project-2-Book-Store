@@ -31,7 +31,7 @@ class Edit extends React.Component {
                             <option value="nonfiction">Non-fiction book</option>
                         </select><br /><br />
 
-                        <label htmlFor="bookIsAvailable">Is book available::</label>
+                        <label htmlFor="bookIsAvailable">Is book available:</label>
                         <input type="checkbox" id="bookIsAvailable" name = "bookIsAvailable" defaultChecked={book.bookIsAvailable} /> <br /><br />
 
                         <input type="submit"/>

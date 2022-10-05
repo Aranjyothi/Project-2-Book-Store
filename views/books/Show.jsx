@@ -27,15 +27,16 @@ class Show extends React.Component {
                     Price: {book.price}<br></br><br />
                     {book.bookIsAvailable ? "Book is available" : "Book  is currently not available"}<br></br><br />
                 </p>
+                <div id="btn">
+                <button>
+                        <a href="/books">Purchase</a>
+                    </button>
+                </div>
                 <div className='edit'>
+                    
                     <button>
                         <a href={`/books/${book._id}/edit`}>Edit</a>
                     </button>
-                    <div className='space'>
-                    <button>
-                        <a href={`/books/${book._id}/purchage`}>Purchage</a>
-                    </button>
-                    </div>
                 </div>
                 <form action={`/books/${book._id}?_method=DELETE`} method="POST">
                     <input type="submit" value="Delete" />

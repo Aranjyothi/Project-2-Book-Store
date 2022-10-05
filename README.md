@@ -1,4 +1,4 @@
-# ** Book Store #
+# Book Store  #
 site is live at 
 ## About the Book Srote:
 

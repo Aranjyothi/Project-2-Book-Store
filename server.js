@@ -23,6 +23,7 @@ app.use(express.json())
 app.use(express.static("public"))
 app.use(methodOverride("_method"))
 app.use('/books', bookStoreRoutes)
+app.get("/", (__,res) => res.redirect('/books'))
 //define port
 const port = process.env.PORT
 // Listen to port

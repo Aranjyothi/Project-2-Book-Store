@@ -7,7 +7,7 @@ In my book store, a client can see a list of books and the availability of the b
 Technologies that I used in, CSS, MongoDB, React, Mangoose,ExpressJS
 
 ## Instalsation are
-For the **Store Project** some packages that may nedd to be install:
+For the **Store Project** some packages that may need to be install:
 * dotenv
 * express
 * react

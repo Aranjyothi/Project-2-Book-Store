@@ -11,7 +11,7 @@ class Show extends React.Component {
             <DefaultLayout title={`${book.name} details`} bookStore="books">
                 
 
-                <h1> Show Book Page</h1>
+                <h1> Book Page</h1>
                 <p>
                     <a id="link" href={book.link}>
                         <img id="image" src={book.link} alt=""  />

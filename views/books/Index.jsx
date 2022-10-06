@@ -7,7 +7,7 @@ class Index extends React.Component{
         return(
             <DefaultLayout title="All Books">
             <div>
-                <h1> Book Page</h1>
+                <h1>All Books</h1>
                 <ul id="books-index">
                     {books.map((book)=>{
                         return (

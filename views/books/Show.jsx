@@ -9,11 +9,12 @@ class Show extends React.Component {
         // console.log(book._id)
         return (
             <DefaultLayout title={`${book.name} details`} bookStore="books">
+                
 
                 <h1> Show Book Page</h1>
                 <p>
                     <a id="link" href={book.link}>
-                        <img id="image" src={book.link} alt="" height='20' width='20' />
+                        <img id="image" src={book.link} alt=""  />
                     </a>
                 </p>
                 <p id="book">
@@ -27,15 +28,16 @@ class Show extends React.Component {
                     Price: {book.price}<br></br><br />
                     {book.bookIsAvailable ? "Book is available" : "Book  is currently not available"}<br></br><br />
                 </p>
-                <div id="btn">
+                <div>
                 <button>
-                        <a href="/books">Purchase</a>
+                        <a id="btn" href="/books"> Purchase </a>
+                        
                     </button>
                 </div>
-                <div className='edit'>
-                    
+                <div>
                     <button>
-                        <a href={`/books/${book._id}/edit`}>Edit</a>
+                    <a id='btn' href={`/books/${book._id}/edit`}>Edit</a>
+                    {/* <a className='edit' href={`/books/${book._id}/edit`}>Edit</a> */}
                     </button>
                 </div>
                 <form action={`/books/${book._id}?_method=DELETE`} method="POST">
@@ -44,7 +46,7 @@ class Show extends React.Component {
                 <nav>
                     <a href="/books">Back</a>
                 </nav>
-
+              
             </DefaultLayout>
         )
     }
